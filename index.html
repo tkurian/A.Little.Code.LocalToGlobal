@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>A.little.code.localtoglobal by tkurian</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>A.little.code.localtoglobal</h1>
+        <h2>Globalizing the word - one variable at a time ...</h2>
+        <a href="https://github.com/tkurian/A.Little.Code.LocalToGlobal" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>LocalToGlobal</h1>
+
+<h2>High-Level Description</h2>
+
+<p>This application will locate local variables specified by a user, and convert them into global variables. It essentially is a very small C parser! The really neat thing about this application is that it can be expanded on to further enhance it's functionality. When I get a bit more time on my hands, I plan on enhancing it in some way, shape or form. I also created a very basic UI to go with it. However, the UI is no where near complete or user friendly. It's something I just whipped up quickly for the purposes of displaying it here :o)</p>
+
+<p>This application consists of four packages: </p>
+
+<h4>management</h4>
+
+<h5>UIManager.java</h5>
+
+<p>This package consists of a class which launches currently launches the GUI. However, in the future, we can add the ability to launch different UIs based on user preference or even based on the OS - as I've done in the past. </p>
+
+<h4>windows</h4>
+
+<h5>WindowsUI.java</h5>
+
+<p>This package consists of a class that manages the graphical user interface for the globalizer. It displays the .c file with the newly created global variable(s).</p>
+
+<h4>utilities</h4>
+
+<p>This package consists of four main files. These include FileIO, UserInput, SymbolsEnum, and TypesEnum.</p>
+
+<h5>1. FileIO.java</h5>
+
+<p>Is a class created in order to handle reading in the .c file specified by the user. The .c file will be the file in which the user would like certain local variables made as global variables. </p>
+
+<h5>2. UserInput.java</h5>
+
+<p>Is a class created in order to handle reading in the .txt file. </p>
+
+<p>The format of the .txt file is as follows:
+float x~my_sqrt</p>
+
+<p>where:</p>
+
+<ul>
+<li>float x: is the variable to be converted to a global variable</li>
+<li>~ is the delimiter to separate the variable to monitor and the function it can be found in</li>
+<li>the function in which the local variable is located within</li>
+</ul><p>You can specify as many local variables in a function as you so desire. You can also specify more than one function if you so desire. In the case you have multiple variables and functions you would like to specify, the .txt file format would be as follows:</p>
+
+<p>float x,float dx~my_sqrt
+float y~random_func</p>
+
+<h5>3. SymbolsEnum.java</h5>
+
+<p>This enum contains different 'symbols' which were used to locate the local variables that were specified by the user. The benefit of having this enum is that we can add more items to it if we ever feel like enhancing or even changing the functionality of this application in the future. </p>
+
+<h5>4. TypesEnum.java</h5>
+
+<p>This enum contains all the different variables types which could exist within a .c file. Here is what the enum contains:</p>
+
+<pre><code>INT("int"), 
+BOOLEAN("boolean"),
+STRING("String"),
+FLOAT("float"),
+DOUBLE("double"),
+BYTE("byte"), 
+CHAR("char"), 
+LONG("long"), 
+SHORT("short"); 
+</code></pre>
+
+<h4>globalize</h4>
+
+<h5>Globalize.java</h5>
+
+<p>This class does all the main work of figuring out when a function begins, if it's the function we care about, as well as changing the local variables into global variables. </p>
+
+<p><code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code>
+<code></code></p>
+
+<p><a href="http://tkurian-programming.blogspot.ca/p/globalizer.html">Back</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/tkurian/A.Little.Code.LocalToGlobal/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/tkurian/A.Little.Code.LocalToGlobal/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/tkurian/A.Little.Code.LocalToGlobal"></a> is maintained by <a href="https://github.com/tkurian">tkurian</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
